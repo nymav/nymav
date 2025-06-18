@@ -1,4 +1,4 @@
-# Hi there, I'm Nyma! 👋
+# Hi there, I'm Nikhil! 👋
 
 **AI/ML Engineer** passionate about building intelligent systems and solving complex problems with data
 
