@@ -83,8 +83,22 @@ I'm an AI/ML enthusiast who thrives on transforming data into actionable insight
 
 ## 🌟 Featured Projects
 
-<!-- Add your best AI/ML projects here when you have them -->
-*Coming soon... Currently working on some exciting AI projects!*
+### 🎭 [Face Emotion Detection Using CNNs](https://github.com/nymav/Face-Emotion-Detection-Using-CNNs)
+Deep learning model for real-time facial emotion recognition using Convolutional Neural Networks
+- **Tech Stack:** Python, TensorFlow/Keras, OpenCV, CNN
+- **Features:** Real-time emotion detection, Computer Vision, Deep Learning
+
+### 📊 [Predictive Modeling for Bank Marketing Campaigns](https://github.com/nymav/Predictive-Modeling-for-Optimizing-Bank-Marketing-Campaigns-Using-Machine-Learning)
+Machine learning solution to optimize bank marketing strategies and predict campaign success
+- **Tech Stack:** Python, Scikit-learn, Pandas, Data Analysis
+- **Features:** Predictive Analytics, Feature Engineering, Model Optimization
+
+### 💭 [Sentiment Analysis on Uber and Ola](https://github.com/nymav/Sentiment-Analysis-on-Uber-and-Ola)
+NLP project analyzing customer sentiment for ride-sharing platforms
+- **Tech Stack:** Python, NLP, Text Processing, Sentiment Analysis
+- **Features:** Natural Language Processing, Data Visualization, Comparative Analysis
+
+*More Coming soon... Currently working on some exciting AI projects!*
 
 ---
 
