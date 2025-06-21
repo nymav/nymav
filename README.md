@@ -76,7 +76,8 @@ I'm an AI/ML enthusiast who thrives on transforming data into actionable insight
 ## 📈 Activity Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nymav&theme=redical&hide_border=true" alt="Activity Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=nymav&theme=redical&hide_border=true" 
+    alt="Activity Graph" />
 </div>
 
 ---
