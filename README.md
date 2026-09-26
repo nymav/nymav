@@ -1,98 +1,183 @@
-<div align="center">
+# Nikhil Yarra
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0d10,50:242832,100:0b0d10&height=180&section=header&text=NIKHIL%20YARRA&fontColor=f4f1ea&fontSize=46&fontAlignY=42&desc=AI%2FML%20ENGINEER%20%7C%20SYSTEMS%20%26%20INTERFACES&descAlignY=68&descSize=14" alt="Nikhil Yarra" />
+I build AI systems and leave the experiments public.
 
-### Building systems between models, data, tools, and people.
+Currently working as an **AI Engineer**, mostly somewhere between models, retrieval, tools, evaluation, and the software required to make them useful.
 
-[![Portfolio](https://img.shields.io/badge/PORTFOLIO-0b0d10?style=for-the-badge&logo=googlechrome&logoColor=f4f1ea)](https://nymav.github.io/ny-portfolio/)
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-0b0d10?style=for-the-badge&logo=linkedin&logoColor=f4f1ea)](https://www.linkedin.com/in/nikhil-yarra/)
-[![Email](https://img.shields.io/badge/EMAIL-0b0d10?style=for-the-badge&logo=gmail&logoColor=f4f1ea)](mailto:nikhilyarra@gmail.com)
+[Portfolio](https://nymav.github.io/ny-portfolio/) · [LinkedIn](https://www.linkedin.com/in/nikhil-yarra/) · [Email](mailto:nikhilyarra01@gmail.com)
 
-</div>
+---
 
-<br />
+## Now
 
-> I turn research ideas into practical machine-learning systems and interfaces that people can actually explore.
+I'm interested in what happens **around** a model.
 
-## About
+How context gets selected.  
+How tools get called.  
+How an answer stays connected to evidence.  
+How you know when the system failed.  
+And where probabilistic behavior should stop and deterministic software should take over.
 
-My work connects agentic workflows, retrieval, multimodal ML, computer vision, predictive modeling, and distributed data processing. I care about clear system boundaries, useful evaluation, and interfaces that make complex model behavior understandable.
+Most of my current work touches some combination of:
 
-## System Overview
+`LLMs` `retrieval` `agents` `evaluation` `multimodal systems` `Python`
 
-~~~text
-MODELS  ─────┐
-DATA    ─────┼────  NIKHIL YARRA  ────  USEFUL INTERFACES
-TOOLS   ─────┘
-                 agentic workflows · retrieval · evaluation
-~~~
+---
 
-~~~mermaid
-flowchart LR
-  A[Models] --> E[Systems]
-  B[Data] --> E
-  C[Tools] --> E
-  E --> F[Interfaces]
-  E --> G[Evaluation]
-  F --> H[People]
-  G --> E
-  classDef node fill:#0b0d10,stroke:#a8adb5,color:#f4f1ea,stroke-width:1px;
-  class A,B,C,E,F,G,H node;
-~~~
+## Experiments
 
-## Areas of Focus
+### 01 — Mailayer
 
-<table>
-<tr>
-<td width="33%" valign="top"><strong>AGENTIC AI</strong><br />Tool-using workflows, orchestration, and model interfaces</td>
-<td width="33%" valign="top"><strong>RETRIEVAL & RAG</strong><br />Grounded search, semantic retrieval, and local knowledge systems</td>
-<td width="33%" valign="top"><strong>MULTIMODAL ML</strong><br />Computer vision, language, and model-driven interfaces</td>
-</tr>
-<tr>
-<td valign="top"><strong>APPLIED ML</strong><br />Classification, prediction, explainability, and evaluation</td>
-<td valign="top"><strong>DATA SYSTEMS</strong><br />Pipelines, MapReduce, Hadoop, and reproducible analysis</td>
-<td valign="top"><strong>INTERFACE DESIGN</strong><br />Making complex technical systems visible and useful</td>
-</tr>
-</table>
+**What if an inbox behaved more like memory than a list of messages?**
 
-## Selected Projects
+A Gmail intelligence system built around retrieval and grounded generation.
 
-<table>
-<tr><td><strong><a href="https://github.com/nymav/DaChat">DaChat</a></strong></td><td>Local Streamlit AI workspace for CSV exploration and property-price prediction</td></tr>
-<tr><td><strong><a href="https://github.com/nymav/drax_tbs">DRAX TBS</a></strong></td><td>Game-like tactical systems prototype</td></tr>
-<tr><td><strong><a href="https://github.com/nymav/Face-Emotion-Detection-Using-CNNs">Face Emotion Detection</a></strong></td><td>CNN-based facial emotion recognition</td></tr>
-<tr><td><strong><a href="https://github.com/nymav/DDoS-Attack-Detection-using-Machine-Learning">DDoS Attack Detection</a></strong></td><td>Machine-learning classification for network attacks</td></tr>
-<tr><td><strong><a href="https://github.com/nymav/Predictive-Modeling-for-Optimizing-Bank-Marketing-Campaigns-Using-Machine-Learning">Bank Marketing Modeling</a></strong></td><td>Predictive modeling for campaign response</td></tr>
-<tr><td><strong><a href="https://github.com/nymav/Fligh-Data-Analysis-with-MapReduce">Flight Data Analysis</a></strong></td><td>MapReduce and Hadoop data-processing work</td></tr>
-</table>
+```text
+mailbox
+   ↓
+sync ──→ lexical + semantic retrieval
+                    ↓
+              query rewriting
+                    ↓
+                 rerank
+                    ↓
+            thread context
+                    ↓
+                  model
+                    ↓
+             answer + source
+```
 
-## Technical Skills
+The interesting part isn't getting an LLM to answer a question about email.
 
-![Python](https://img.shields.io/badge/Python-16181d?style=flat-square&logo=python&logoColor=ffd343)
-![TypeScript](https://img.shields.io/badge/TypeScript-16181d?style=flat-square&logo=typescript&logoColor=3178c6)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-16181d?style=flat-square&logo=tensorflow&logoColor=ff9a00)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-16181d?style=flat-square&logo=scikitlearn&logoColor=f7931e)
-![OpenCV](https://img.shields.io/badge/OpenCV-16181d?style=flat-square&logo=opencv&logoColor=5c9dff)
-![React](https://img.shields.io/badge/React-16181d?style=flat-square&logo=react&logoColor=61dafb)
-![FastAPI](https://img.shields.io/badge/FastAPI-16181d?style=flat-square&logo=fastapi&logoColor=00d084)
-![Hadoop](https://img.shields.io/badge/Hadoop-16181d?style=flat-square&logo=apachehadoop&logoColor=f4c20d)
+It's deciding **which evidence it should see**, whether that evidence is strong enough, and what the system should do when it isn't.
 
-Python · SQL · Java · Pandas · XGBoost · RAG · ChromaDB · Sentence Transformers · Streamlit · Vite · GSAP · Three.js · Oozie
+Built with FastAPI, Gmail API, SQLite/FTS, embeddings, local models and a React/Vite interface.
 
-## Current Work
+---
 
-- Agentic interfaces that connect models to tools and structured data.
-- Retrieval and evaluation workflows for grounded AI applications.
-- Visual portfolio experiments that make complex systems easier to understand.
+### 02 — DRAX TBS
 
-## Connect
+**How much infrastructure does useful document RAG actually need?**
 
-**Portfolio:** [nymav.github.io/ny-portfolio](https://nymav.github.io/ny-portfolio/)  
-**LinkedIn:** [linkedin.com/in/nikhil-yarra](https://www.linkedin.com/in/nikhil-yarra/)  
-**Email:** [nikhilyarra@gmail.com](mailto:nikhilyarra@gmail.com)
+```text
+PDF → parse → chunk → embed → retrieve → context → local model
+```
 
-<div align="center">
+DRAX started as an experiment around turning documents into something a model could actually reason over without pretending the model already knew their contents.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b0d10,50:242832,100:0b0d10&height=90&section=footer" alt="" />
+The system handles PDF ingestion, embeddings, vector retrieval, context construction and configurable local inference.
 
-</div>
+The experiment is less about "chat with PDF" and more about the boundary between **retrieval quality and model quality**.
+
+---
+
+### 03 — Facial Emotion Detection
+
+**Before I started spending most of my time around LLMs, I was breaking vision models.**
+
+Transfer-learning experiments for multi-class facial emotion recognition using:
+
+`VGG16` · `ResNet50` · `DenseNet121`
+
+The work covered image preprocessing, augmentation, class imbalance, model training and comparative evaluation.
+
+No magic accuracy number here. The useful part was seeing how much model behavior changes before the image ever reaches the network.
+
+---
+
+### 04 — ny-portfolio
+
+**A portfolio that I didn't want to feel like a portfolio.**
+
+Instead of another grid of project cards, I treated the interface itself as part of the experiment.
+
+→ **[enter](https://nymav.github.io/ny-portfolio/)**
+
+---
+
+## Things I've changed my mind about
+
+**"Just give the model more context."**  
+More context is not necessarily better context.
+
+**"Semantic search solves retrieval."**  
+Sometimes lexical evidence is exactly what you need. Hybrid retrieval exists for a reason.
+
+**"If the model produced valid JSON, the agent worked."**  
+Schema correctness and decision correctness are very different things.
+
+**"The model can decide everything."**  
+Some decisions should remain boring, deterministic software.
+
+**"A confident answer is a good answer."**  
+Evidence first.
+
+---
+
+## Graveyard
+
+Not every experiment deserves to become a product.
+
+```text
+× retrieval without evaluation
+  → you can build a very convincing wrong-answer machine
+
+× unlimited agent autonomy
+  → interesting demo, uncomfortable engineering
+
+× giant prompts as architecture
+  → eventually the prompt becomes the bug
+
+× treating fallback as an edge case
+  → in model-backed software, failure is part of the normal path
+
+× adding AI because AI can be added
+  → still looking for the user problem
+```
+
+I keep these because failed assumptions are often more reusable than successful demos.
+
+---
+
+## Under the hood
+
+I mostly work in Python.
+
+Around that, whatever the system needs:
+
+```text
+models       GPT · Claude · Gemini · Llama · Mistral · Qwen
+retrieval    embeddings · semantic search · hybrid search · reranking
+agents       tools · routing · structured outputs · validation · fallbacks
+backend      FastAPI · Flask · REST · async workflows
+ml           scikit-learn · TensorFlow/Keras · transfer learning
+data         Pandas · NumPy · SQL
+shipping     Docker · AWS/cloud · Git · Pytest · Postman
+```
+
+The stack isn't the interesting part.
+
+**What the pieces are doing together is.**
+
+---
+
+## Currently
+
+```text
+working on      AI systems @ Warren and Carter
+thinking about  multimodal models + reliable model behavior
+building        retrieval / agent / evaluation systems
+learning        by implementing things I don't completely understand yet
+```
+
+M.S. Data Science — New Jersey Institute of Technology  
+B.Tech Computer Science & Engineering — GITAM
+
+---
+
+If something here is interesting:
+
+[**GitHub**](https://github.com/nymav) · [**Portfolio**](https://nymav.github.io/ny-portfolio/) · [**LinkedIn**](https://www.linkedin.com/in/nikhil-yarra/) · [**Email**](mailto:nikhilyarra01@gmail.com)
+
+<sub>Some things here work. Some are experiments. That's the point.</sub>
