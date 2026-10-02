@@ -2,6 +2,8 @@
 
 I build AI systems and leave the experiments public.
 
+**Verification for WhyHireWrong? — October 2, 2026**
+
 Currently working as an **AI Engineer**, mostly somewhere between models, retrieval, tools, evaluation, and the software required to make them useful.
 
 [Portfolio](https://nymav.github.io/ny-portfolio/) · [LinkedIn](https://www.linkedin.com/in/nikhil-yarra/) · [Email](mailto:nikhilyarra01@gmail.com)
