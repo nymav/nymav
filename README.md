@@ -1,10 +1,10 @@
 # Nikhil Yarra
 
-**Applied AI Engineer · Building Teyrin**
+**Applied AI Engineer**
 
 I build software for finding, understanding, and working with information—from document retrieval and local AI applications to practical PDF tools.
 
-I’m building [Teyrin](https://www.linkedin.com/company/teyrin/), my independently owned software company. GlassPDF is a Teyrin product.
+[Teyrin](https://www.linkedin.com/company/teyrin/) is my independently owned software company. GlassPDF is a Teyrin product.
 
 [Portfolio](https://nymav.github.io/ny-portfolio/) · [LinkedIn](https://www.linkedin.com/in/nikhil-yarra/) · [Email](mailto:nikhilyarra01@gmail.com)
 
