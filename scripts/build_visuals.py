@@ -4,6 +4,7 @@ Requires Pillow. Fonts are local system fonts, not redistributed. A static PNG
 and a slow ambient GIF share the same scene; README honors reduced-motion mode.
 """
 import math
+from html import escape
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
@@ -106,18 +107,84 @@ def banner(frame):
     for y in range(0,H,32):d.line((0,y,W,y),fill='#0e1829')
     d.line((40,40,1240,40),fill='#344459');d.line((40,440,1240,440),fill='#344459')
     d.rectangle((40,40,44,72),fill=COLORS['amber'])
-    tracked(d,(72,74),'NYMAV',font(16,True),COLORS['amber'],3)
-    d.text((68,112),'NIKHIL YARRA',font=font(86),fill=COLORS['ink'])
-    d.text((72,220),'Applied AI engineering',font=font(29,True),fill=COLORS['ink'])
-    d.text((72,279),'Agents · Retrieval · Evaluation',font=font(20,True),fill=COLORS['muted'])
-    d.text((72,371),'DocAtlas / DocMend / ModelGuard',font=font(17,True),fill=COLORS['cyan'])
+    tracked(d,(72,74),'AI ENGINEERING',font(15,True),COLORS['amber'],2)
+    d.text((68,113),'AGENTS &',font=font(80),fill=COLORS['ink'])
+    d.text((68,200),'EVIDENCE',font=font(80),fill=COLORS['ink'])
+    d.text((72,325),'Retrieval · Validation · Evaluation',font=font(17,True),fill=COLORS['muted'])
+    d.text((72,382),'Research + open-source tools',font=font(16,True),fill=COLORS['cyan'])
     sprite=scene(frame).resize((560,420),Image.Resampling.NEAREST)
     im.paste(sprite,(660,20))
     return im
 
+def project_panel(name, category, accent, kind):
+    """A game-interface chapter panel. All capability text remains native Markdown."""
+    parts=[]
+    def rect(x,y,w,h,color):parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{color}"/>')
+    def line(coords,color,width=2):parts.append(f'<polyline points="{coords}" fill="none" stroke="{color}" stroke-width="{width}"/>')
+    parts.append('<svg xmlns="http://www.w3.org/2000/svg" width="920" height="172" viewBox="0 0 920 172" role="img">')
+    parts.append(f'<title>{escape(name)} — {escape(category)}</title>')
+    parts.append('<path d="M0 0H900L920 20V172H20L0 152Z" fill="#101b2c"/>')
+    parts.append('<path d="M1 1H899L919 21V171H21L1 151Z" fill="none" stroke="#34475c"/>')
+    for x in range(24,920,24):rect(x,0,1,172,'#162236')
+    for y in range(24,172,24):rect(0,y,920,1,'#162236')
+    rect(0,36,4,62,accent)
+    # Original pixel icons: source archive, document change, paired evaluation.
+    if kind=='sources':
+        rect(42,46,34,48,'#455e72');rect(50,40,34,48,accent);rect(58,34,34,48,'#d7d6bd')
+        for y,w in [(46,22),(54,17),(62,20)]:rect(64,y,w,3,'#47616e')
+        rect(62,70,16,3,accent)
+    elif kind=='changes':
+        rect(48,38,34,50,'#d7d6bd');rect(58,47,16,3,'#455e72');rect(58,56,12,3,'#455e72')
+        rect(56,65,20,3,accent);rect(77,75,20,3,accent);rect(85,67,3,19,accent)
+    else:
+        rect(43,41,20,45,'#405b72');rect(70,41,20,45,'#d7d6bd')
+        for y,w in [(49,11),(58,8),(67,10)]:rect(47,y,w,3,accent)
+        for y,w in [(49,11),(58,11),(67,7)]:rect(74,y,w,3,'#456274')
+        line('51,97 63,109 86,86',accent,3)
+    parts.append(f'<text x="126" y="76" fill="#ecede4" font-size="40" font-weight="600" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">{escape(name)}</text>')
+    parts.append(f'<text x="128" y="112" fill="{accent}" font-size="18" letter-spacing="1" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">{escape(category.upper())}</text>')
+    # A small illustrative trace, not a measured score or claimed model result.
+    rect(610,38,260,96,'#0b1422')
+    if kind=='sources':
+        for y,w in [(49,55),(66,74),(83,62),(100,48)]:rect(623,y,w,3,'#4c697a')
+        rect(620,78,81,15,'#28474f');rect(623,83,62,3,accent)
+        line('704,85 729,85 729,62 757,62',accent)
+        rect(759,49,90,27,'#243e4c');rect(768,58,67,3,'#b7c9c2');rect(768,65,48,3,'#6e979d')
+    elif kind=='changes':
+        for x in [626,768]:
+            rect(x,49,66,66,'#213248')
+            for y,w in [(60,44),(71,37),(94,40)]:rect(x+10,y,w,3,'#627e8c')
+        rect(636,81,36,4,'#997667');rect(778,81,43,4,accent)
+        line('697,82 726,82 726,57 762,57',accent)
+        rect(721,77,10,10,accent)
+    else:
+        for y in [61,104]:
+            line(f'627,{y} 653,{y} 664,{y-9} 687,{y-9} 698,{y+7} 723,{y+7} 740,{y} 775,{y} 790,{y-8} 840,{y-8}', '#6e969b' if y==61 else accent)
+        rect(761,44,2,75,'#4d6276');rect(756,75,12,12,accent)
+    rect(42,146,836,1,'#2d4055')
+    parts.append('</svg>')
+    (OUT/(name.lower()+'.svg')).write_text(''.join(parts)+'\n')
+
+def section_panel(filename, title):
+    safe=escape(title)
+    svg=f'''<svg xmlns="http://www.w3.org/2000/svg" width="920" height="88" viewBox="0 0 920 88" role="img">
+<title>{safe}</title><path d="M0 0H902L920 18V88H0Z" fill="#142136"/>
+<path d="M0 87H920M1 0H901L919 18" fill="none" stroke="#3c5269"/>
+<path d="M28 25H36V33H28ZM40 33H48V41H40ZM28 41H36V49H28Z" fill="#edb66e"/>
+<text x="72" y="56" fill="#ecede4" font-size="36" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace">{safe}</text>
+<path d="M804 28H842V56H804ZM816 22H854V50H846M816 56V62H854V54" fill="none" stroke="#658a94" stroke-width="2"/>
+</svg>'''
+    (OUT/filename).write_text(svg+'\n')
+
 if __name__ == '__main__':
-    still=banner(0);still.save(OUT/'ai-research-lab.png',optimize=True)
+    still=banner(0);still.save(OUT/'ai-workspace.png',optimize=True)
     palette=still.quantize(colors=128,method=Image.Quantize.MEDIANCUT)
     frames=[banner(i).quantize(palette=palette,dither=Image.Dither.NONE) for i in range(24)]
-    frames[0].save(OUT/'ai-research-lab.gif',save_all=True,append_images=frames[1:],duration=180,loop=0,optimize=True,disposal=1)
+    frames[0].save(OUT/'ai-workspace.gif',save_all=True,append_images=frames[1:],duration=180,loop=0,optimize=True,disposal=1)
+    project_panel('DocAtlas','Retrieval & grounding',COLORS['cyan'],'sources')
+    project_panel('DocMend','Documentation integrity',COLORS['amber'],'changes')
+    project_panel('ModelGuard','Regression evaluation','#b4baa5','evaluation')
+    section_panel('research-section.svg','Research outputs')
+    section_panel('software-section.svg','More software')
+    section_panel('background-section.svg','Tools & background')
     for path in sorted(OUT.iterdir()):print(path.name,path.stat().st_size)
