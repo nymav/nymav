@@ -1,30 +1,39 @@
-# Nikhil Yarra
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/ai-research-lab.png">
+  <img src="assets/ai-research-lab.gif" width="1280" alt="Nikhil Yarra — applied AI engineering, agents, retrieval and evaluation. An original pixel-art AI research workstation with source archives and trace-review terminals.">
+</picture>
 
-**Applied AI Engineer**
+I’m **Nikhil Yarra**, an AI engineer working on reliable agents, grounded retrieval and evaluation. I build tools for inspecting sources, checking changes and understanding where AI systems fail.
 
-I build software for finding, understanding, and working with information—from document retrieval and local AI applications to practical PDF tools.
+[Portfolio](https://nymav.github.io/ny-portfolio/) · [LinkedIn](https://www.linkedin.com/in/nikhil-yarra/) · [Email](mailto:nikhilyarra.mail@gmail.com)
 
-[Portfolio](https://nymav.github.io/ny-portfolio/) · [LinkedIn](https://www.linkedin.com/in/nikhil-yarra/) · [Email](mailto:nikhilyarra01@gmail.com)
+## Selected engineering
 
-## Selected work
+**[DocAtlas](https://github.com/nymav/docatlas) · Retrieval and grounding**<br>
+Documentation search with inspectable sources, hybrid retrieval and optional cited draft answers. [Provider-validation notes](https://github.com/nymav/docatlas/blob/main/docs/LIVE_PROVIDER_VALIDATION.md).
 
-| Project | What it does |
-| --- | --- |
-| [DocAtlas](https://github.com/nymav/docatlas) | Documentation search with inspectable sources, optional cited answers, and retrieval evaluation. |
-| [GlassPDF](https://github.com/nymav/glasspdf) · [Use the app](https://nymav.github.io/glasspdf/) | A browser and desktop PDF workspace for arranging, combining, and extracting pages, with local OCR for scanned text. |
-| [Mailayer](https://github.com/nymav/mailayer) | Gmail analysis with read-only access, local search, prioritisation, and optional local-model assistance. |
-| [DRAX TBS](https://github.com/nymav/drax_tbs) | A textbook tutor combining PDF retrieval, vector search, and local model inference. |
+**[DocMend](https://github.com/nymav/docmend) · Documentation integrity**<br>
+Analyzes documentation drift across Git revisions, links findings to evidence and guards narrowly scoped repairs. [Implementation and validation](https://github.com/nymav/docmend/blob/main/docs/OFFLINE-MODULE-VALIDATION.md).
 
-## Engineering focus
+**[ModelGuard](https://github.com/nymav/modelguard) · Regression evaluation**<br>
+Compares candidate prompts or models with a pinned baseline, preserving paired outcomes, regression reports and immutable run history. [Evaluation scope](https://github.com/nymav/modelguard#run-the-included-demonstration).
 
-- **Applied AI:** document processing, hybrid retrieval, model integration, and evaluation.
-- **Backend and data:** Python, FastAPI, SQL, SQLite, Pandas, and NumPy.
-- **Product delivery:** React, Vite, Docker, Git, and automated testing.
+DocMend and ModelGuard are locally validated pilots. Live-provider and independently reviewed real-world evaluation remain pending; synthetic demonstrations are not production accuracy claims.
 
-## Background
+## Research outputs
 
-AI Engineer at **Warren and Carter**.
+- [**Tool-Observation Integrity in AI Agents: A Critical Survey of Validation, Provenance, and Execution Assurance**](https://doi.org/10.2139/ssrn.7545819) — SSRN. Validation, provenance and execution assurance in tool-using agents.
+- [**Simulator Update Frequency Sensitivity in Driving Scenario Search**](https://doi.org/10.5281/zenodo.23817382) — Zenodo. Simulator update frequency as an evaluation sensitivity variable.
 
-**M.S. Data Science** — New Jersey Institute of Technology
+## More software
 
-**B.Tech Computer Science & Engineering** — GITAM
+- **[GlassPDF](https://github.com/nymav/glasspdf):** local PDF organisation, extraction and English OCR. [Open the app](https://nymav.github.io/glasspdf/).
+- **[Mailayer](https://github.com/nymav/mailayer):** read-only Gmail analysis, local search and optional local-model assistance.
+- **[DRAX TBS](https://github.com/nymav/drax_tbs):** textbook retrieval with vector search and local-model inference.
+
+## Tools and background
+
+Python · SQL · FastAPI · SQLite · Git · Docker · GitHub Actions · React
+
+**M.S. Data Science**, New Jersey Institute of Technology<br>
+**B.Tech Computer Science & Engineering**, GITAM
